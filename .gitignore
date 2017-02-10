@@ -1,1 +1,4 @@
 YoCoolSpotify/
+__pycache__/
+*.pyc
+
