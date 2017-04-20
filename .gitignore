@@ -1,4 +1,12 @@
 YoCoolSpotify/
 __pycache__/
 *.pyc
+.spotipyoauthcache
+client_secrets.json
+*.cache*
+.settings/
+.pydevproject
+.project
+*auth*
+
 
