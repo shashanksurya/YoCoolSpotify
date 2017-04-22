@@ -22,16 +22,16 @@
               <label><input type="radio" name="source" value="spotify">Spotify</label>
             </div>
             <div class="radio">
-            <label><input type="radio" name="source" value="youtube" checked>YouTube</label>
+              <label><input type="radio" name="source" value="youtube" checked>YouTube</label>
             </div>
 
           </div>
         </div>
-
+        
         <input type="submit" class="btn btn-info">
       </div>
     </form>
-
+    
 
     <div class="progress-bar progress-bar-success active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
       La La La .......
@@ -44,50 +44,6 @@
       </div>
       <div class="col-md-6">
         <h3><p> Y O U T U B E </p></h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLXAFBn9BKGrLrWTk9zCW0wPeGd39NCsKE&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
-
-        <script type="text/javascript">
-          var tag = document.createElement('script');
-          tag.id = 'iframe-demo';
-          tag.src = 'https://www.youtube.com/iframe_api';
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-          var player;
-          function onYouTubeIframeAPIReady() {
-            player = new YT.Player('existing-iframe-example', {
-              events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-              }
-            });
-          }
-          function onPlayerReady(event) {
-            document.getElementById('existing-iframe-example').style.borderColor = '#FF6D00';
-          }
-          function changeBorderColor(playerStatus) {
-            var color;
-            if (playerStatus == -1) {
-      color = "#37474F"; // unstarted = gray
-    } else if (playerStatus == 0) {
-      color = "#FFFF00"; // ended = yellow
-    } else if (playerStatus == 1) {
-      color = "#33691E"; // playing = green
-    } else if (playerStatus == 2) {
-      color = "#DD2C00"; // paused = red
-    } else if (playerStatus == 3) {
-      color = "#AA00FF"; // buffering = purple
-    } else if (playerStatus == 5) {
-      color = "#FF6DOO"; // video cued = orange
-    }
-    if (color) {
-      document.getElementById('existing-iframe-example').style.borderColor = color;
-    }
-  }
-  function onPlayerStateChange(event) {
-    changeBorderColor(event.data);
-  }
-</script>
 <table class="table">
   <thead>
     <tr>
@@ -101,9 +57,7 @@
   <tbody>
     {% for song in songs %}
     <tr>
-      <td>
-      <div style="width: 64px; height: 64px;">
-      <img src="{{ song.img_url }}" style="width: inherit"/></td></div>
+      <td><img src="{{ song.img_url }}"/></td>
       <td>{{ song.name }}</td>
       <td>{{ song.artist }}</td>
       <td>{{ song.album }}</td>

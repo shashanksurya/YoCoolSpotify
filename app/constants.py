@@ -1,5 +1,6 @@
 import os
 
+
 SPOTIPY_CLIENT_ID = ''
 SPOTIPY_CLIENT_SECRET = ''
 SPOTIPY_REDIRECT_URI = 'http://localhost:8080/'
@@ -20,3 +21,6 @@ For more information about the client_secrets.json file format, please visit:
 https://developers.google.com/api-client-library/python/guide/aaa_client_secrets
 """ % os.path.abspath(os.path.join(os.path.dirname(__file__),
                                    YOUTUBE_CLIENT_SECRETS_FILE))
+
+
+YOUTUBE_PLAYLIST_ID = ''
